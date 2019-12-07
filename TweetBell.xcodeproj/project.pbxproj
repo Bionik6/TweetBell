@@ -14,6 +14,9 @@
 		408AC197239BFCD9003CABA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 408AC196239BFCD9003CABA9 /* Assets.xcassets */; };
 		408AC19A239BFCD9003CABA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 408AC198239BFCD9003CABA9 /* LaunchScreen.storyboard */; };
 		408AC1A5239BFCD9003CABA9 /* TweetBellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC1A4239BFCD9003CABA9 /* TweetBellTests.swift */; };
+		408AC1B2239BFD83003CABA9 /* SecretsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC1B1239BFD83003CABA9 /* SecretsTests.swift */; };
+		408AC1B4239BFDC0003CABA9 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC1B3239BFDC0003CABA9 /* Secrets.swift */; };
+		408AC1B6239C0119003CABA9 /* secrets.json in Resources */ = {isa = PBXBuildFile; fileRef = 408AC1B5239C0119003CABA9 /* secrets.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,9 @@
 		408AC1A0239BFCD9003CABA9 /* TweetBellTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TweetBellTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		408AC1A4239BFCD9003CABA9 /* TweetBellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetBellTests.swift; sourceTree = "<group>"; };
 		408AC1A6239BFCD9003CABA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		408AC1B1239BFD83003CABA9 /* SecretsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretsTests.swift; sourceTree = "<group>"; };
+		408AC1B3239BFDC0003CABA9 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		408AC1B5239C0119003CABA9 /* secrets.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = secrets.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,13 +85,14 @@
 		408AC18C239BFCD8003CABA9 /* TweetBell */ = {
 			isa = PBXGroup;
 			children = (
-				408AC18D239BFCD8003CABA9 /* AppDelegate.swift */,
-				408AC18F239BFCD8003CABA9 /* SceneDelegate.swift */,
+				408AC1B7239C0476003CABA9 /* Core */,
+				408AC1B8239C047C003CABA9 /* Presentation */,
+				408AC1C1239C04F6003CABA9 /* Resources */,
 				408AC191239BFCD8003CABA9 /* ViewController.swift */,
 				408AC193239BFCD8003CABA9 /* Main.storyboard */,
-				408AC196239BFCD9003CABA9 /* Assets.xcassets */,
 				408AC198239BFCD9003CABA9 /* LaunchScreen.storyboard */,
 				408AC19B239BFCD9003CABA9 /* Info.plist */,
+				408AC1B3239BFDC0003CABA9 /* Secrets.swift */,
 			);
 			path = TweetBell;
 			sourceTree = "<group>";
@@ -93,10 +100,188 @@
 		408AC1A3239BFCD9003CABA9 /* TweetBellTests */ = {
 			isa = PBXGroup;
 			children = (
+				408AC1C2239C051B003CABA9 /* Core */,
+				408AC1C3239C051C003CABA9 /* Presentation */,
 				408AC1A4239BFCD9003CABA9 /* TweetBellTests.swift */,
 				408AC1A6239BFCD9003CABA9 /* Info.plist */,
+				408AC1B1239BFD83003CABA9 /* SecretsTests.swift */,
 			);
 			path = TweetBellTests;
+			sourceTree = "<group>";
+		};
+		408AC1B7239C0476003CABA9 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				408AC1BC239C04A3003CABA9 /* Broadcasters */,
+				408AC1BA239C048E003CABA9 /* Data Store */,
+				408AC1B9239C0487003CABA9 /* Entities */,
+				408AC1BB239C0497003CABA9 /* Remote API */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		408AC1B8239C047C003CABA9 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				408AC1CC239C0547003CABA9 /* App */,
+				408AC1BD239C04B3003CABA9 /* Displayable Entities */,
+				408AC1C0239C04D0003CABA9 /* Interaction Responders */,
+				408AC1BE239C04BE003CABA9 /* Obersers */,
+				408AC1BF239C04C7003CABA9 /* User Interfaces */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		408AC1B9239C0487003CABA9 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		408AC1BA239C048E003CABA9 /* Data Store */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Data Store";
+			sourceTree = "<group>";
+		};
+		408AC1BB239C0497003CABA9 /* Remote API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Remote API";
+			sourceTree = "<group>";
+		};
+		408AC1BC239C04A3003CABA9 /* Broadcasters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Broadcasters;
+			sourceTree = "<group>";
+		};
+		408AC1BD239C04B3003CABA9 /* Displayable Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Displayable Entities";
+			sourceTree = "<group>";
+		};
+		408AC1BE239C04BE003CABA9 /* Obersers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Obersers;
+			sourceTree = "<group>";
+		};
+		408AC1BF239C04C7003CABA9 /* User Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "User Interfaces";
+			sourceTree = "<group>";
+		};
+		408AC1C0239C04D0003CABA9 /* Interaction Responders */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Interaction Responders";
+			sourceTree = "<group>";
+		};
+		408AC1C1239C04F6003CABA9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				408AC196239BFCD9003CABA9 /* Assets.xcassets */,
+				408AC1B5239C0119003CABA9 /* secrets.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		408AC1C2239C051B003CABA9 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				408AC1C6239C0526003CABA9 /* Broadcasters */,
+				408AC1C4239C0526003CABA9 /* Data Store */,
+				408AC1C5239C0526003CABA9 /* Entities */,
+				408AC1C7239C0526003CABA9 /* Remote API */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		408AC1C3239C051C003CABA9 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				408AC1CA239C052C003CABA9 /* Displayable Entities */,
+				408AC1C8239C052C003CABA9 /* Interaction Responders */,
+				408AC1C9239C052C003CABA9 /* Obersers */,
+				408AC1CB239C052C003CABA9 /* User Interfaces */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		408AC1C4239C0526003CABA9 /* Data Store */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Data Store";
+			sourceTree = "<group>";
+		};
+		408AC1C5239C0526003CABA9 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		408AC1C6239C0526003CABA9 /* Broadcasters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Broadcasters;
+			sourceTree = "<group>";
+		};
+		408AC1C7239C0526003CABA9 /* Remote API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Remote API";
+			sourceTree = "<group>";
+		};
+		408AC1C8239C052C003CABA9 /* Interaction Responders */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Interaction Responders";
+			sourceTree = "<group>";
+		};
+		408AC1C9239C052C003CABA9 /* Obersers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Obersers;
+			sourceTree = "<group>";
+		};
+		408AC1CA239C052C003CABA9 /* Displayable Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Displayable Entities";
+			sourceTree = "<group>";
+		};
+		408AC1CB239C052C003CABA9 /* User Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "User Interfaces";
+			sourceTree = "<group>";
+		};
+		408AC1CC239C0547003CABA9 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				408AC18D239BFCD8003CABA9 /* AppDelegate.swift */,
+				408AC18F239BFCD8003CABA9 /* SceneDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				408AC19A239BFCD9003CABA9 /* LaunchScreen.storyboard in Resources */,
+				408AC1B6239C0119003CABA9 /* secrets.json in Resources */,
 				408AC197239BFCD9003CABA9 /* Assets.xcassets in Resources */,
 				408AC195239BFCD8003CABA9 /* Main.storyboard in Resources */,
 			);
@@ -201,6 +387,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				408AC192239BFCD8003CABA9 /* ViewController.swift in Sources */,
+				408AC1B4239BFDC0003CABA9 /* Secrets.swift in Sources */,
 				408AC18E239BFCD8003CABA9 /* AppDelegate.swift in Sources */,
 				408AC190239BFCD8003CABA9 /* SceneDelegate.swift in Sources */,
 			);
@@ -211,6 +398,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				408AC1A5239BFCD9003CABA9 /* TweetBellTests.swift in Sources */,
+				408AC1B2239BFD83003CABA9 /* SecretsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
