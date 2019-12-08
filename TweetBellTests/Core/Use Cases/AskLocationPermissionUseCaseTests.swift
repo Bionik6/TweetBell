@@ -10,10 +10,11 @@ struct MockLocationManager: LocationManager {
   var desiredAccuracy: CLLocationAccuracy = kCLLocationAccuracyBestForNavigation
   var location: CLLocation? = CLLocation(latitude: 10, longitude: 10)
   
-  func stopUpdatingLocation() { }
-  func startUpdatingLocation() { }
-  func requestAlwaysAuthorization() { }
-  func requestWhenInUseAuthorization() { }
+  func requestLocation() {}
+  func stopUpdatingLocation() {}
+  func startUpdatingLocation() {}
+  func requestAlwaysAuthorization() {}
+  func requestWhenInUseAuthorization() {}
   
   func isLocationServicesEnabled() -> Bool { return true }
   
@@ -48,22 +49,10 @@ class AskLocationPermissionUseCaseTests: XCTestCase {
     XCTAssertTrue(locationServiceEnabled)
   }
   
-  func testCompletion() {
-    //    let promise = expectation(description: "on complete expectation")
-    //    sut.start()
-    sut.onComplete = { result in
-      
-      switch result {
-        //        promise.fulfill()
-        case .success(let coordinates):
-          XCTAssertEqual(coordinates.latitude, 40)
-          XCTAssertEqual(coordinates.longitude, self.sut.locationManager.location!.coordinate.longitude)
-        case .failure(let error):
-          XCTAssertEqual(error, TweetBellError.locationPermissionNotGiven)
-        
-      }
-    }
-    //    waitForExpectations(timeout: 0.5, handler: nil)
+  func testCurrentLocation() {
+    sut.locationManager.requestLocation()
+    XCTAssertEqual(sut.locationManager.location!.coordinate.longitude, 10)
+    XCTAssertEqual(sut.locationManager.location!.coordinate.latitude, 10)
   }
   
 }
