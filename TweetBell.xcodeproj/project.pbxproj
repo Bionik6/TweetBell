@@ -17,6 +17,29 @@
 		408AC1B2239BFD83003CABA9 /* SecretsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC1B1239BFD83003CABA9 /* SecretsTests.swift */; };
 		408AC1B4239BFDC0003CABA9 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC1B3239BFDC0003CABA9 /* Secrets.swift */; };
 		408AC1B6239C0119003CABA9 /* secrets.json in Resources */ = {isa = PBXBuildFile; fileRef = 408AC1B5239C0119003CABA9 /* secrets.json */; };
+		408AC1CF239C100C003CABA9 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC1CE239C100C003CABA9 /* UseCase.swift */; };
+		408AC1D1239C1035003CABA9 /* AskLocationPermissionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC1D0239C1035003CABA9 /* AskLocationPermissionUseCase.swift */; };
+		408AC1D4239C2124003CABA9 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC1D3239C2124003CABA9 /* MapViewModel.swift */; };
+		408AC1D6239C2133003CABA9 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC1D5239C2133003CABA9 /* ViewModel.swift */; };
+		408AC1DB239C241E003CABA9 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC1DA239C241E003CABA9 /* Container.swift */; };
+		408AC1DE239C2468003CABA9 /* ContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC1DD239C2468003CABA9 /* ContainerTests.swift */; };
+		408AC1E1239C24BC003CABA9 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC1E0239C24BC003CABA9 /* MapViewModel.swift */; };
+		408AC1E3239C251E003CABA9 /* ViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC1E2239C251E003CABA9 /* ViewModelFactory.swift */; };
+		408AC1E5239C2604003CABA9 /* Container+MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC1E4239C2604003CABA9 /* Container+MapViewModel.swift */; };
+		408AC1E7239C288E003CABA9 /* Container+ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC1E6239C288E003CABA9 /* Container+ViewControllerFactory.swift */; };
+		408AC1E9239C28A2003CABA9 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC1E8239C28A2003CABA9 /* ViewControllerFactory.swift */; };
+		408AC1EB239C28E9003CABA9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC1EA239C28E9003CABA9 /* MapViewController.swift */; };
+		408AC1ED239C29EF003CABA9 /* MapUserInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC1EC239C29EF003CABA9 /* MapUserInterface.swift */; };
+		408AC1F1239C2B51003CABA9 /* ActivateMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC1F0239C2B51003CABA9 /* ActivateMapView.swift */; };
+		408AC1F3239C2BE2003CABA9 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC1F2239C2BE2003CABA9 /* MapView.swift */; };
+		408AC1F5239C2FCE003CABA9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC1F4239C2FCE003CABA9 /* User.swift */; };
+		408AC1F7239C2FD8003CABA9 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC1F6239C2FD8003CABA9 /* Tweet.swift */; };
+		408AC209239C3643003CABA9 /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC202239C32DD003CABA9 /* Dispatcher.swift */; };
+		408AC20A239C3643003CABA9 /* RequestParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC1FC239C31CB003CABA9 /* RequestParams.swift */; };
+		408AC20B239C3643003CABA9 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC1FD239C31CB003CABA9 /* Reachability.swift */; };
+		408AC20C239C3643003CABA9 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC1FE239C31CB003CABA9 /* HTTPMethod.swift */; };
+		408AC20D239C3643003CABA9 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC1FF239C31CB003CABA9 /* Request.swift */; };
+		408AC20E239C3643003CABA9 /* WebClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC200239C31CB003CABA9 /* WebClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +67,29 @@
 		408AC1B1239BFD83003CABA9 /* SecretsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretsTests.swift; sourceTree = "<group>"; };
 		408AC1B3239BFDC0003CABA9 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		408AC1B5239C0119003CABA9 /* secrets.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = secrets.json; sourceTree = "<group>"; };
+		408AC1CE239C100C003CABA9 /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
+		408AC1D0239C1035003CABA9 /* AskLocationPermissionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskLocationPermissionUseCase.swift; sourceTree = "<group>"; };
+		408AC1D3239C2124003CABA9 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		408AC1D5239C2133003CABA9 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		408AC1DA239C241E003CABA9 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
+		408AC1DD239C2468003CABA9 /* ContainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerTests.swift; sourceTree = "<group>"; };
+		408AC1E0239C24BC003CABA9 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		408AC1E2239C251E003CABA9 /* ViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelFactory.swift; sourceTree = "<group>"; };
+		408AC1E4239C2604003CABA9 /* Container+MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Container+MapViewModel.swift"; sourceTree = "<group>"; };
+		408AC1E6239C288E003CABA9 /* Container+ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Container+ViewControllerFactory.swift"; sourceTree = "<group>"; };
+		408AC1E8239C28A2003CABA9 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
+		408AC1EA239C28E9003CABA9 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		408AC1EC239C29EF003CABA9 /* MapUserInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapUserInterface.swift; sourceTree = "<group>"; };
+		408AC1F0239C2B51003CABA9 /* ActivateMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivateMapView.swift; sourceTree = "<group>"; };
+		408AC1F2239C2BE2003CABA9 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		408AC1F4239C2FCE003CABA9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		408AC1F6239C2FD8003CABA9 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		408AC1FC239C31CB003CABA9 /* RequestParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestParams.swift; sourceTree = "<group>"; };
+		408AC1FD239C31CB003CABA9 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		408AC1FE239C31CB003CABA9 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		408AC1FF239C31CB003CABA9 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		408AC200239C31CB003CABA9 /* WebClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebClient.swift; sourceTree = "<group>"; };
+		408AC202239C32DD003CABA9 /* Dispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispatcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +158,8 @@
 		408AC1B7239C0476003CABA9 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				408AC1D7239C23CB003CABA9 /* Dependency Injection */,
+				408AC1CD239C0FFB003CABA9 /* Use Cases */,
 				408AC1BC239C04A3003CABA9 /* Broadcasters */,
 				408AC1BA239C048E003CABA9 /* Data Store */,
 				408AC1B9239C0487003CABA9 /* Entities */,
@@ -128,6 +176,7 @@
 				408AC1C0239C04D0003CABA9 /* Interaction Responders */,
 				408AC1BE239C04BE003CABA9 /* Obersers */,
 				408AC1BF239C04C7003CABA9 /* User Interfaces */,
+				408AC1D2239C2110003CABA9 /* ViewModels */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -135,6 +184,8 @@
 		408AC1B9239C0487003CABA9 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				408AC1F4239C2FCE003CABA9 /* User.swift */,
+				408AC1F6239C2FD8003CABA9 /* Tweet.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -149,6 +200,7 @@
 		408AC1BB239C0497003CABA9 /* Remote API */ = {
 			isa = PBXGroup;
 			children = (
+				408AC1F8239C31CB003CABA9 /* Network */,
 			);
 			path = "Remote API";
 			sourceTree = "<group>";
@@ -177,6 +229,7 @@
 		408AC1BF239C04C7003CABA9 /* User Interfaces */ = {
 			isa = PBXGroup;
 			children = (
+				408AC20F239CF9C5003CABA9 /* Map */,
 			);
 			path = "User Interfaces";
 			sourceTree = "<group>";
@@ -200,6 +253,7 @@
 		408AC1C2239C051B003CABA9 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				408AC1DC239C2444003CABA9 /* Dependency Injection */,
 				408AC1C6239C0526003CABA9 /* Broadcasters */,
 				408AC1C4239C0526003CABA9 /* Data Store */,
 				408AC1C5239C0526003CABA9 /* Entities */,
@@ -211,9 +265,7 @@
 		408AC1C3239C051C003CABA9 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				408AC1CA239C052C003CABA9 /* Displayable Entities */,
-				408AC1C8239C052C003CABA9 /* Interaction Responders */,
-				408AC1C9239C052C003CABA9 /* Obersers */,
+				408AC1DF239C24A8003CABA9 /* ViewModels */,
 				408AC1CB239C052C003CABA9 /* User Interfaces */,
 			);
 			path = Presentation;
@@ -247,27 +299,6 @@
 			path = "Remote API";
 			sourceTree = "<group>";
 		};
-		408AC1C8239C052C003CABA9 /* Interaction Responders */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Interaction Responders";
-			sourceTree = "<group>";
-		};
-		408AC1C9239C052C003CABA9 /* Obersers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Obersers;
-			sourceTree = "<group>";
-		};
-		408AC1CA239C052C003CABA9 /* Displayable Entities */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Displayable Entities";
-			sourceTree = "<group>";
-		};
 		408AC1CB239C052C003CABA9 /* User Interfaces */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,6 +313,92 @@
 				408AC18F239BFCD8003CABA9 /* SceneDelegate.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		408AC1CD239C0FFB003CABA9 /* Use Cases */ = {
+			isa = PBXGroup;
+			children = (
+				408AC1CE239C100C003CABA9 /* UseCase.swift */,
+				408AC1D0239C1035003CABA9 /* AskLocationPermissionUseCase.swift */,
+			);
+			path = "Use Cases";
+			sourceTree = "<group>";
+		};
+		408AC1D2239C2110003CABA9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				408AC1D3239C2124003CABA9 /* MapViewModel.swift */,
+				408AC1D5239C2133003CABA9 /* ViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		408AC1D7239C23CB003CABA9 /* Dependency Injection */ = {
+			isa = PBXGroup;
+			children = (
+				408AC1D9239C23FD003CABA9 /* Factories */,
+				408AC1D8239C23F4003CABA9 /* Container */,
+			);
+			path = "Dependency Injection";
+			sourceTree = "<group>";
+		};
+		408AC1D8239C23F4003CABA9 /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				408AC1DA239C241E003CABA9 /* Container.swift */,
+				408AC1E4239C2604003CABA9 /* Container+MapViewModel.swift */,
+				408AC1E6239C288E003CABA9 /* Container+ViewControllerFactory.swift */,
+			);
+			path = Container;
+			sourceTree = "<group>";
+		};
+		408AC1D9239C23FD003CABA9 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				408AC1E2239C251E003CABA9 /* ViewModelFactory.swift */,
+				408AC1E8239C28A2003CABA9 /* ViewControllerFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		408AC1DC239C2444003CABA9 /* Dependency Injection */ = {
+			isa = PBXGroup;
+			children = (
+				408AC1DD239C2468003CABA9 /* ContainerTests.swift */,
+			);
+			path = "Dependency Injection";
+			sourceTree = "<group>";
+		};
+		408AC1DF239C24A8003CABA9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				408AC1E0239C24BC003CABA9 /* MapViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		408AC1F8239C31CB003CABA9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				408AC202239C32DD003CABA9 /* Dispatcher.swift */,
+				408AC1FC239C31CB003CABA9 /* RequestParams.swift */,
+				408AC1FD239C31CB003CABA9 /* Reachability.swift */,
+				408AC1FE239C31CB003CABA9 /* HTTPMethod.swift */,
+				408AC1FF239C31CB003CABA9 /* Request.swift */,
+				408AC200239C31CB003CABA9 /* WebClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		408AC20F239CF9C5003CABA9 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				408AC1EA239C28E9003CABA9 /* MapViewController.swift */,
+				408AC1EC239C29EF003CABA9 /* MapUserInterface.swift */,
+				408AC1F0239C2B51003CABA9 /* ActivateMapView.swift */,
+				408AC1F2239C2BE2003CABA9 /* MapView.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,10 +503,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				408AC1E5239C2604003CABA9 /* Container+MapViewModel.swift in Sources */,
+				408AC20D239C3643003CABA9 /* Request.swift in Sources */,
+				408AC1CF239C100C003CABA9 /* UseCase.swift in Sources */,
+				408AC1D1239C1035003CABA9 /* AskLocationPermissionUseCase.swift in Sources */,
 				408AC192239BFCD8003CABA9 /* ViewController.swift in Sources */,
+				408AC1ED239C29EF003CABA9 /* MapUserInterface.swift in Sources */,
+				408AC1E3239C251E003CABA9 /* ViewModelFactory.swift in Sources */,
+				408AC1E9239C28A2003CABA9 /* ViewControllerFactory.swift in Sources */,
+				408AC1E7239C288E003CABA9 /* Container+ViewControllerFactory.swift in Sources */,
 				408AC1B4239BFDC0003CABA9 /* Secrets.swift in Sources */,
+				408AC1F3239C2BE2003CABA9 /* MapView.swift in Sources */,
+				408AC1D4239C2124003CABA9 /* MapViewModel.swift in Sources */,
+				408AC20A239C3643003CABA9 /* RequestParams.swift in Sources */,
+				408AC1F1239C2B51003CABA9 /* ActivateMapView.swift in Sources */,
 				408AC18E239BFCD8003CABA9 /* AppDelegate.swift in Sources */,
+				408AC1D6239C2133003CABA9 /* ViewModel.swift in Sources */,
+				408AC209239C3643003CABA9 /* Dispatcher.swift in Sources */,
+				408AC1F5239C2FCE003CABA9 /* User.swift in Sources */,
+				408AC20E239C3643003CABA9 /* WebClient.swift in Sources */,
+				408AC1DB239C241E003CABA9 /* Container.swift in Sources */,
+				408AC20B239C3643003CABA9 /* Reachability.swift in Sources */,
 				408AC190239BFCD8003CABA9 /* SceneDelegate.swift in Sources */,
+				408AC20C239C3643003CABA9 /* HTTPMethod.swift in Sources */,
+				408AC1F7239C2FD8003CABA9 /* Tweet.swift in Sources */,
+				408AC1EB239C28E9003CABA9 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,8 +535,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				408AC1DE239C2468003CABA9 /* ContainerTests.swift in Sources */,
 				408AC1A5239BFCD9003CABA9 /* TweetBellTests.swift in Sources */,
 				408AC1B2239BFD83003CABA9 /* SecretsTests.swift in Sources */,
+				408AC1E1239C24BC003CABA9 /* MapViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
