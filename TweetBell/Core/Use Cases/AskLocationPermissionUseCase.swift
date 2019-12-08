@@ -15,27 +15,61 @@ enum TweetBellError: LocalizedError {
   }
 }
 
+protocol LocationManager {
+  // CLLocationManager Properties
+  var location: CLLocation? { get }
+  var delegate: CLLocationManagerDelegate? { get set }
+  var distanceFilter: CLLocationDistance { get set }
+  var desiredAccuracy: CLLocationAccuracy { get set }
+  var pausesLocationUpdatesAutomatically: Bool { get set }
+  var allowsBackgroundLocationUpdates: Bool { get set }
+  
+  // CLLocationManager Methods
+  func requestAlwaysAuthorization()
+  func requestWhenInUseAuthorization()
+  func startUpdatingLocation()
+  func stopUpdatingLocation()
+  
+  // Wrappers for CLLocationManager class functions
+  func isLocationServicesEnabled() -> Bool
+  func getAuthorizationStatus() -> CLAuthorizationStatus
+}
+
+
+extension CLLocationManager: LocationManager {
+  func isLocationServicesEnabled() -> Bool {
+    return CLLocationManager.locationServicesEnabled()
+  }
+  
+  func getAuthorizationStatus() -> CLAuthorizationStatus {
+    return CLLocationManager.authorizationStatus()
+  }
+}
+
+
 typealias AskLocationPermissionUseCaseResult = Result<CLLocationCoordinate2D, TweetBellError>
 
 class AskLocationPermissionUseCase: NSObject, UseCase {
   
   var onComplete: (AskLocationPermissionUseCaseResult) -> Void
-  private let locationManager: CLLocationManager
+  private(set) var locationManager: LocationManager
   
-  init(locationManager: CLLocationManager,
+  init(locationManager: LocationManager,
        onComplete: ((AskLocationPermissionUseCaseResult) -> Void)? = nil) {
     self.locationManager = locationManager
     self.onComplete = onComplete ?? { result in }
   }
   
   func start() {
-    assert(Thread.isMainThread)
+//    assert(Thread.isMainThread)
     locationManager.requestAlwaysAuthorization()
     locationManager.requestWhenInUseAuthorization()
     if CLLocationManager.locationServicesEnabled() {
       locationManager.startUpdatingLocation()
       locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
       locationManager.delegate = self
+      onComplete(.success(locationManager.location!.coordinate))
+      
     } else {
       onComplete(.failure(.locationPermissionNotGiven))
     }
@@ -61,7 +95,7 @@ extension AskLocationPermissionUseCase: CLLocationManagerDelegate {
     }
   }
   
-  func getCurrentLocation(manager: CLLocationManager) {
+  func getCurrentLocation(manager: LocationManager) {
     guard let coordinates = manager.location?.coordinate else { return }
     onComplete(.success(coordinates))
   }

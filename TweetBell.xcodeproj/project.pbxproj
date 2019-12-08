@@ -26,7 +26,7 @@
 		408AC1D6239C2133003CABA9 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC1D5239C2133003CABA9 /* ViewModel.swift */; };
 		408AC1DB239C241E003CABA9 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC1DA239C241E003CABA9 /* Container.swift */; };
 		408AC1DE239C2468003CABA9 /* ContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC1DD239C2468003CABA9 /* ContainerTests.swift */; };
-		408AC1E1239C24BC003CABA9 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC1E0239C24BC003CABA9 /* MapViewModel.swift */; };
+		408AC1E1239C24BC003CABA9 /* MapViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC1E0239C24BC003CABA9 /* MapViewModelTests.swift */; };
 		408AC1E3239C251E003CABA9 /* ViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC1E2239C251E003CABA9 /* ViewModelFactory.swift */; };
 		408AC1E5239C2604003CABA9 /* Container+MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC1E4239C2604003CABA9 /* Container+MapViewModel.swift */; };
 		408AC1E7239C288E003CABA9 /* Container+ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC1E6239C288E003CABA9 /* Container+ViewControllerFactory.swift */; };
@@ -79,7 +79,7 @@
 		408AC1D5239C2133003CABA9 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		408AC1DA239C241E003CABA9 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		408AC1DD239C2468003CABA9 /* ContainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerTests.swift; sourceTree = "<group>"; };
-		408AC1E0239C24BC003CABA9 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		408AC1E0239C24BC003CABA9 /* MapViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModelTests.swift; sourceTree = "<group>"; };
 		408AC1E2239C251E003CABA9 /* ViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelFactory.swift; sourceTree = "<group>"; };
 		408AC1E4239C2604003CABA9 /* Container+MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Container+MapViewModel.swift"; sourceTree = "<group>"; };
 		408AC1E6239C288E003CABA9 /* Container+ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Container+ViewControllerFactory.swift"; sourceTree = "<group>"; };
@@ -397,7 +397,7 @@
 		408AC1DF239C24A8003CABA9 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				408AC1E0239C24BC003CABA9 /* MapViewModel.swift */,
+				408AC1E0239C24BC003CABA9 /* MapViewModelTests.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -566,7 +566,7 @@
 				408AC1DE239C2468003CABA9 /* ContainerTests.swift in Sources */,
 				408AC1A5239BFCD9003CABA9 /* TweetBellTests.swift in Sources */,
 				408AC1B2239BFD83003CABA9 /* SecretsTests.swift in Sources */,
-				408AC1E1239C24BC003CABA9 /* MapViewModel.swift in Sources */,
+				408AC1E1239C24BC003CABA9 /* MapViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,12 +1,12 @@
 import XCTest
 @testable import TweetBell
 
-class MapViewModel: XCTestCase {
+class MapViewModelTests: XCTestCase {
   
   private var sut: MapViewModel!
   
   override func setUp() {
-    sut = MapViewModel()
+//    sut = MapViewModel()
   }
 
   
