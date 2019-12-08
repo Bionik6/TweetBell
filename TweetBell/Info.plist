@@ -20,12 +20,12 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-  <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-  <string>TweetBell needs your current position to show Tweets around you</string>
-  <key>NSLocationAlwaysUsageDescription</key>
-  <string>TweetBell needs your current position to show Tweets around you</string>
-  <key>NSLocationWhenInUseUsageDescription</key>
-  <string>TweetBell needs your current position to show Tweets around you</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>TweetBell needs your current position to show Tweets around you</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>TweetBell needs your current position to show Tweets around you</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>TweetBell needs your current position to show Tweets around you</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
