@@ -139,6 +139,7 @@
 		402510EC239CFD7000325B9F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				408AC1B3239BFDC0003CABA9 /* Secrets.swift */,
 				402510ED239CFD8000325B9F /* helpers.swift */,
 				402510EF239CFDBD00325B9F /* UIView+Constraints.swift */,
 				402510F8239D2C5900325B9F /* Logger.swift */,
@@ -192,8 +193,6 @@
 				408AC1C1239C04F6003CABA9 /* Resources */,
 				408AC198239BFCD9003CABA9 /* LaunchScreen.storyboard */,
 				408AC19B239BFCD9003CABA9 /* Info.plist */,
-				408AC1B3239BFDC0003CABA9 /* Secrets.swift */,
-				403F15BD239DA29E00D690E4 /* Main.storyboard */,
 			);
 			path = TweetBell;
 			sourceTree = "<group>";
@@ -303,6 +302,7 @@
 		408AC1C1239C04F6003CABA9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				403F15BD239DA29E00D690E4 /* Main.storyboard */,
 				408AC196239BFCD9003CABA9 /* Assets.xcassets */,
 				408AC1B5239C0119003CABA9 /* secrets.json */,
 			);
