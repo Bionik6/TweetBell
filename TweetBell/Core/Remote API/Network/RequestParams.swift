@@ -6,5 +6,3 @@ public enum RequestParams {
   case url([String:Any])
   
 }
-
-

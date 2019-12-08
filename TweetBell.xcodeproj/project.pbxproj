@@ -14,6 +14,9 @@
 		402510F7239D292700325B9F /* TweetBellError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402510F6239D292700325B9F /* TweetBellError.swift */; };
 		402510F9239D2C5900325B9F /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402510F8239D2C5900325B9F /* Logger.swift */; };
 		402510FB239D48E900325B9F /* TweetRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402510FA239D48E900325B9F /* TweetRequests.swift */; };
+		402510FD239D497600325B9F /* TweetRequestsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402510FC239D497600325B9F /* TweetRequestsTests.swift */; };
+		403F15BA239D90EC00D690E4 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F15B9239D90EC00D690E4 /* SwiftyJSON.swift */; };
+		403F15BC239D926100D690E4 /* ShowRecentTweetsOnMapUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F15BB239D926100D690E4 /* ShowRecentTweetsOnMapUseCase.swift */; };
 		408AC18E239BFCD8003CABA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC18D239BFCD8003CABA9 /* AppDelegate.swift */; };
 		408AC190239BFCD8003CABA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC18F239BFCD8003CABA9 /* SceneDelegate.swift */; };
 		408AC192239BFCD8003CABA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC191239BFCD8003CABA9 /* ViewController.swift */; };
@@ -67,6 +70,9 @@
 		402510F6239D292700325B9F /* TweetBellError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetBellError.swift; sourceTree = "<group>"; };
 		402510F8239D2C5900325B9F /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		402510FA239D48E900325B9F /* TweetRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetRequests.swift; sourceTree = "<group>"; };
+		402510FC239D497600325B9F /* TweetRequestsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetRequestsTests.swift; sourceTree = "<group>"; };
+		403F15B9239D90EC00D690E4 /* SwiftyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		403F15BB239D926100D690E4 /* ShowRecentTweetsOnMapUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowRecentTweetsOnMapUseCase.swift; sourceTree = "<group>"; };
 		408AC18A239BFCD8003CABA9 /* TweetBell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TweetBell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		408AC18D239BFCD8003CABA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		408AC18F239BFCD8003CABA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -332,6 +338,7 @@
 		408AC1C7239C0526003CABA9 /* Remote API */ = {
 			isa = PBXGroup;
 			children = (
+				402510FC239D497600325B9F /* TweetRequestsTests.swift */,
 			);
 			path = "Remote API";
 			sourceTree = "<group>";
@@ -357,6 +364,7 @@
 			children = (
 				408AC1CE239C100C003CABA9 /* UseCase.swift */,
 				408AC1D0239C1035003CABA9 /* AskLocationPermissionUseCase.swift */,
+				403F15BB239D926100D690E4 /* ShowRecentTweetsOnMapUseCase.swift */,
 			);
 			path = "Use Cases";
 			sourceTree = "<group>";
@@ -417,6 +425,7 @@
 		408AC1F8239C31CB003CABA9 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				403F15B9239D90EC00D690E4 /* SwiftyJSON.swift */,
 				408AC202239C32DD003CABA9 /* Dispatcher.swift */,
 				408AC1FC239C31CB003CABA9 /* RequestParams.swift */,
 				408AC1FD239C31CB003CABA9 /* Reachability.swift */,
@@ -551,6 +560,7 @@
 				408AC1E7239C288E003CABA9 /* Container+ViewControllerFactory.swift in Sources */,
 				408AC1B4239BFDC0003CABA9 /* Secrets.swift in Sources */,
 				408AC1F3239C2BE2003CABA9 /* MapView.swift in Sources */,
+				403F15BA239D90EC00D690E4 /* SwiftyJSON.swift in Sources */,
 				408AC1D4239C2124003CABA9 /* MapViewModel.swift in Sources */,
 				402510F0239CFDBD00325B9F /* UIView+Constraints.swift in Sources */,
 				408AC20A239C3643003CABA9 /* RequestParams.swift in Sources */,
@@ -565,6 +575,7 @@
 				408AC1DB239C241E003CABA9 /* Container.swift in Sources */,
 				408AC20B239C3643003CABA9 /* Reachability.swift in Sources */,
 				402510FB239D48E900325B9F /* TweetRequests.swift in Sources */,
+				403F15BC239D926100D690E4 /* ShowRecentTweetsOnMapUseCase.swift in Sources */,
 				408AC190239BFCD8003CABA9 /* SceneDelegate.swift in Sources */,
 				402510F9239D2C5900325B9F /* Logger.swift in Sources */,
 				402510F5239D28F700325B9F /* LocationManager.swift in Sources */,
@@ -583,6 +594,7 @@
 				408AC1A5239BFCD9003CABA9 /* TweetBellTests.swift in Sources */,
 				408AC1B2239BFD83003CABA9 /* SecretsTests.swift in Sources */,
 				408AC1E1239C24BC003CABA9 /* MapViewModelTests.swift in Sources */,
+				402510FD239D497600325B9F /* TweetRequestsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,6 @@ protocol Dispatcher: AnyObject {
   
   init(session: URLSession)
   
-  func execute<T: Decodable>(request: Request, completion: @escaping (Result<T, TweetBellError>)->())
+  func execute(request: Request, completion: @escaping (Result<JSON, TweetBellError>)->())
 
 }

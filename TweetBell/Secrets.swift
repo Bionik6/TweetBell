@@ -6,6 +6,7 @@ struct Secrets: Decodable {
   let apiSecretKey: String
   let accessToken: String
   let accessTokenSecret: String
+  let authenticationToken: String
   
   static let shared = Secrets()
   

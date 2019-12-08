@@ -15,23 +15,16 @@ final class WebClient: Dispatcher {
     self.baseURLString = baseURLString
   }
   
-  func execute<T: Decodable>(request: Request, completion: @escaping (Result<T, TweetBellError>)->()) {
+  func execute(request: Request, completion: @escaping (Result<JSON, TweetBellError>)->()) {
     let reachability = Reachability()
     guard reachability!.isReachable else { completion(.failure(.noInternetConnection)); return }
     
     let sessionRequest = prepareURLRequest(for: request)
     let task = session.dataTask(with: sessionRequest) { (data, response, error) in
       
-      guard ((response as? HTTPURLResponse)?.statusCode) != nil else {
-        completion(.failure(.dataUnprocessable))
-        return
-      }
       if (error == nil) {
-        guard let data = data else { completion(.failure(.dataUnprocessable)); return }
-        let decoder = JSONDecoder()
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
-        let newData = try! decoder.decode(T.self, from: data)
-        completion(.success(newData))
+        guard let data = data, let jsonData = try? JSON(data: data) else { completion(.failure(.dataUnprocessable)); return }
+        completion(.success(jsonData))
       }
       else { completion(.failure(.dataUnprocessable)) }
     }
@@ -50,6 +43,7 @@ final class WebClient: Dispatcher {
       if case .url(let urlParams) = params {
         var components = URLComponents(string: fullURLString)!
         components.queryItems = urlParams.map { URLQueryItem(name: $0.key, value: String(describing: $0.value)) }
+        urlRequest.url = components.url
       }
     }
     

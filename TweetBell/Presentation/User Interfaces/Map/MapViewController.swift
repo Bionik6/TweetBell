@@ -34,7 +34,6 @@ final class MapViewController: UIViewController {
         self?.userInterface.recenter(at: location)
       }
       if case .failure = result {
-        //        self.locationPermissionGiven = false
       }
     }
 
