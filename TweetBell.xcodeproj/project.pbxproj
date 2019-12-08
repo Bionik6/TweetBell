@@ -18,6 +18,10 @@
 		403F15BA239D90EC00D690E4 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F15B9239D90EC00D690E4 /* SwiftyJSON.swift */; };
 		403F15BC239D926100D690E4 /* ShowRecentTweetsOnMapUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F15BB239D926100D690E4 /* ShowRecentTweetsOnMapUseCase.swift */; };
 		403F15BE239DA29E00D690E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 403F15BD239DA29E00D690E4 /* Main.storyboard */; };
+		403F15C6239DA34000D690E4 /* HTTPMethodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F15C3239DA33B00D690E4 /* HTTPMethodTests.swift */; };
+		403F15C7239DA34000D690E4 /* RequestParamsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F15C4239DA33B00D690E4 /* RequestParamsTests.swift */; };
+		403F15C8239DA34000D690E4 /* RequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F15C1239DA33B00D690E4 /* RequestTests.swift */; };
+		403F15CA239DA34000D690E4 /* ResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F15C2239DA33B00D690E4 /* ResponseTests.swift */; };
 		408AC18E239BFCD8003CABA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC18D239BFCD8003CABA9 /* AppDelegate.swift */; };
 		408AC190239BFCD8003CABA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC18F239BFCD8003CABA9 /* SceneDelegate.swift */; };
 		408AC197239BFCD9003CABA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 408AC196239BFCD9003CABA9 /* Assets.xcassets */; };
@@ -73,6 +77,10 @@
 		403F15B9239D90EC00D690E4 /* SwiftyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		403F15BB239D926100D690E4 /* ShowRecentTweetsOnMapUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowRecentTweetsOnMapUseCase.swift; sourceTree = "<group>"; };
 		403F15BD239DA29E00D690E4 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		403F15C1239DA33B00D690E4 /* RequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTests.swift; sourceTree = "<group>"; };
+		403F15C2239DA33B00D690E4 /* ResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseTests.swift; sourceTree = "<group>"; };
+		403F15C3239DA33B00D690E4 /* HTTPMethodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethodTests.swift; sourceTree = "<group>"; };
+		403F15C4239DA33B00D690E4 /* RequestParamsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestParamsTests.swift; sourceTree = "<group>"; };
 		408AC18A239BFCD8003CABA9 /* TweetBell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TweetBell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		408AC18D239BFCD8003CABA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		408AC18F239BFCD8003CABA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +154,17 @@
 			path = "Use Cases";
 			sourceTree = "<group>";
 		};
+		403F15BF239DA33300D690E4 /* Remote API */ = {
+			isa = PBXGroup;
+			children = (
+				403F15C3239DA33B00D690E4 /* HTTPMethodTests.swift */,
+				403F15C4239DA33B00D690E4 /* RequestParamsTests.swift */,
+				403F15C1239DA33B00D690E4 /* RequestTests.swift */,
+				403F15C2239DA33B00D690E4 /* ResponseTests.swift */,
+			);
+			path = "Remote API";
+			sourceTree = "<group>";
+		};
 		408AC181239BFCD8003CABA9 = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +201,7 @@
 		408AC1A3239BFCD9003CABA9 /* TweetBellTests */ = {
 			isa = PBXGroup;
 			children = (
+				403F15BF239DA33300D690E4 /* Remote API */,
 				408AC1C2239C051B003CABA9 /* Core */,
 				408AC1C3239C051C003CABA9 /* Presentation */,
 				408AC1A4239BFCD9003CABA9 /* TweetBellTests.swift */,
@@ -585,11 +605,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				403F15C8239DA34000D690E4 /* RequestTests.swift in Sources */,
 				402510F3239D029A00325B9F /* AskLocationPermissionUseCaseTests.swift in Sources */,
 				408AC1DE239C2468003CABA9 /* ContainerTests.swift in Sources */,
 				408AC1A5239BFCD9003CABA9 /* TweetBellTests.swift in Sources */,
+				403F15C7239DA34000D690E4 /* RequestParamsTests.swift in Sources */,
 				408AC1B2239BFD83003CABA9 /* SecretsTests.swift in Sources */,
+				403F15C6239DA34000D690E4 /* HTTPMethodTests.swift in Sources */,
 				408AC1E1239C24BC003CABA9 /* MapViewModelTests.swift in Sources */,
+				403F15CA239DA34000D690E4 /* ResponseTests.swift in Sources */,
 				402510FD239D497600325B9F /* TweetRequestsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
