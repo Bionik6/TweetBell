@@ -18,7 +18,7 @@ final class ShowRecentTweetsOnMapUseCase: UseCase {
       switch response {
         case .success(let json):
           let tweets = json["statuses"].arrayValue.compactMap { Tweet.init(json: $0) }
-          log.debug(tweets)
+          self.onComplete(.success(tweets))
         case .failure(_): break
       }
     }
