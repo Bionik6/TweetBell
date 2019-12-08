@@ -4,10 +4,10 @@ import CoreLocation
 
 class MapViewModel: ViewModel, ObservableObject {
   
-  private let askLocationPermissionUseCase: AskLocationPermissionUseCase
-  
   @Published var locationPermissionGiven: Bool = false
   @Published var currentCoordinates: CLLocationCoordinate2D? = nil
+
+  private let askLocationPermissionUseCase: AskLocationPermissionUseCase
   
   init(askPermissionUseCase: AskLocationPermissionUseCase) {
     self.askLocationPermissionUseCase = askPermissionUseCase

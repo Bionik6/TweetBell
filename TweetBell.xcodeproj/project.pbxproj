@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		402510EE239CFD8000325B9F /* helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402510ED239CFD8000325B9F /* helpers.swift */; };
 		402510F0239CFDBD00325B9F /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402510EF239CFDBD00325B9F /* UIView+Constraints.swift */; };
+		402510F3239D029A00325B9F /* AskLocationPermissionUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402510F2239D029A00325B9F /* AskLocationPermissionUseCaseTests.swift */; };
 		408AC18E239BFCD8003CABA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC18D239BFCD8003CABA9 /* AppDelegate.swift */; };
 		408AC190239BFCD8003CABA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC18F239BFCD8003CABA9 /* SceneDelegate.swift */; };
 		408AC192239BFCD8003CABA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC191239BFCD8003CABA9 /* ViewController.swift */; };
@@ -57,6 +58,7 @@
 /* Begin PBXFileReference section */
 		402510ED239CFD8000325B9F /* helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helpers.swift; sourceTree = "<group>"; };
 		402510EF239CFDBD00325B9F /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		402510F2239D029A00325B9F /* AskLocationPermissionUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskLocationPermissionUseCaseTests.swift; sourceTree = "<group>"; };
 		408AC18A239BFCD8003CABA9 /* TweetBell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TweetBell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		408AC18D239BFCD8003CABA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		408AC18F239BFCD8003CABA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +123,14 @@
 				402510EF239CFDBD00325B9F /* UIView+Constraints.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		402510F1239D027000325B9F /* Use Cases */ = {
+			isa = PBXGroup;
+			children = (
+				402510F2239D029A00325B9F /* AskLocationPermissionUseCaseTests.swift */,
+			);
+			path = "Use Cases";
 			sourceTree = "<group>";
 		};
 		408AC181239BFCD8003CABA9 = {
@@ -267,6 +277,7 @@
 		408AC1C2239C051B003CABA9 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				402510F1239D027000325B9F /* Use Cases */,
 				408AC1DC239C2444003CABA9 /* Dependency Injection */,
 				408AC1C6239C0526003CABA9 /* Broadcasters */,
 				408AC1C4239C0526003CABA9 /* Data Store */,
@@ -551,6 +562,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				402510F3239D029A00325B9F /* AskLocationPermissionUseCaseTests.swift in Sources */,
 				408AC1DE239C2468003CABA9 /* ContainerTests.swift in Sources */,
 				408AC1A5239BFCD9003CABA9 /* TweetBellTests.swift in Sources */,
 				408AC1B2239BFD83003CABA9 /* SecretsTests.swift in Sources */,

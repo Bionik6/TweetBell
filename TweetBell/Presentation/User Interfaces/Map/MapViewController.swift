@@ -21,4 +21,14 @@ final class MapViewController: UIViewController {
     view = userInterface
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    setupObservers()
+  }
+  
+  private func setupObservers() {
+    viewModel.askForLocationPermission()
+    
+  }
+  
 }
