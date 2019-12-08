@@ -4,7 +4,17 @@ import CoreLocation
 
 final class MapView: UIView, MapUserInterface {
   
-  let map = MKMapView()
+  private lazy var mapView = MKMapView()
+  
+  override func didMoveToWindow() {			
+    super.didMoveToWindow()
+    setupView()
+  }
+  
+  func setupView() {
+    addSubview(mapView)
+    mapView.snap(to: self)
+  }
   
   func zoomIn() {
     

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		402510EE239CFD8000325B9F /* helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402510ED239CFD8000325B9F /* helpers.swift */; };
+		402510F0239CFDBD00325B9F /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402510EF239CFDBD00325B9F /* UIView+Constraints.swift */; };
 		408AC18E239BFCD8003CABA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC18D239BFCD8003CABA9 /* AppDelegate.swift */; };
 		408AC190239BFCD8003CABA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC18F239BFCD8003CABA9 /* SceneDelegate.swift */; };
 		408AC192239BFCD8003CABA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC191239BFCD8003CABA9 /* ViewController.swift */; };
@@ -53,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		402510ED239CFD8000325B9F /* helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helpers.swift; sourceTree = "<group>"; };
+		402510EF239CFDBD00325B9F /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		408AC18A239BFCD8003CABA9 /* TweetBell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TweetBell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		408AC18D239BFCD8003CABA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		408AC18F239BFCD8003CABA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +114,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		402510EC239CFD7000325B9F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				402510ED239CFD8000325B9F /* helpers.swift */,
+				402510EF239CFDBD00325B9F /* UIView+Constraints.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		408AC181239BFCD8003CABA9 = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +144,7 @@
 		408AC18C239BFCD8003CABA9 /* TweetBell */ = {
 			isa = PBXGroup;
 			children = (
+				402510EC239CFD7000325B9F /* Utils */,
 				408AC1B7239C0476003CABA9 /* Core */,
 				408AC1B8239C047C003CABA9 /* Presentation */,
 				408AC1C1239C04F6003CABA9 /* Resources */,
@@ -515,7 +529,9 @@
 				408AC1B4239BFDC0003CABA9 /* Secrets.swift in Sources */,
 				408AC1F3239C2BE2003CABA9 /* MapView.swift in Sources */,
 				408AC1D4239C2124003CABA9 /* MapViewModel.swift in Sources */,
+				402510F0239CFDBD00325B9F /* UIView+Constraints.swift in Sources */,
 				408AC20A239C3643003CABA9 /* RequestParams.swift in Sources */,
+				402510EE239CFD8000325B9F /* helpers.swift in Sources */,
 				408AC1F1239C2B51003CABA9 /* ActivateMapView.swift in Sources */,
 				408AC18E239BFCD8003CABA9 /* AppDelegate.swift in Sources */,
 				408AC1D6239C2133003CABA9 /* ViewModel.swift in Sources */,

@@ -38,19 +38,18 @@ final class WebClient: Dispatcher {
     task.resume()
   }
   
-  
-  func prepareURLRequest(for request: Request) -> URLRequest {
+  private func prepareURLRequest(for request: Request) -> URLRequest {
     let fullURLString = baseURLString.appendingPathComponent(request.path)
     guard let url = URL(string: fullURLString) else { fatalError("The URL is not valid") }
     var urlRequest = URLRequest(url: url)
     
     if let params = request.params {
-      switch params {
-        case .body(let bodyParams):
-          urlRequest.httpBody = try? JSONSerialization.data(withJSONObject: bodyParams, options: .init(rawValue: 0))
-        case .url(let urlParams):
-          var components = URLComponents(string: fullURLString)!
-          components.queryItems = urlParams.map { URLQueryItem(name: $0.key, value: String(describing: $0.value)) }
+      if case .body(let bodyParams) = params {
+        urlRequest.httpBody = try? JSONSerialization.data(withJSONObject: bodyParams, options: .init(rawValue: 0))
+      }
+      if case .url(let urlParams) = params {
+        var components = URLComponents(string: fullURLString)!
+        components.queryItems = urlParams.map { URLQueryItem(name: $0.key, value: String(describing: $0.value)) }
       }
     }
     
