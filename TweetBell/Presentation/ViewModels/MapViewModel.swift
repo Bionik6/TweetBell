@@ -5,8 +5,10 @@ import CoreLocation
 class MapViewModel: ViewModel, ObservableObject {
   
   @Published var locationPermissionGiven: Bool = false
-  @Published var currentCoordinates: CLLocationCoordinate2D? = nil
-
+  @Published var currentLocation: CLLocation? = nil
+  
+  var onLocationComplete: (AskLocationPermissionUseCaseResult) -> Void = { _ in }
+  
   private let askLocationPermissionUseCase: AskLocationPermissionUseCase
   
   init(askPermissionUseCase: AskLocationPermissionUseCase) {
@@ -15,10 +17,11 @@ class MapViewModel: ViewModel, ObservableObject {
   
   func askForLocationPermission() {
     askLocationPermissionUseCase.start()
-    askLocationPermissionUseCase.onComplete = { result in
-      if case .success(let coordinates) = result { self.currentCoordinates = coordinates }
+    askLocationPermissionUseCase.onComplete = { self.onLocationComplete($0) }
+    /* askLocationPermissionUseCase.onComplete = { result in
+      if case .success(let location) = result { self.currentLocation = location }
       if case .failure = result { self.locationPermissionGiven = false }
-    }
+    } */
   }
   
 }

@@ -1,4 +1,5 @@
 import UIKit
+import Combine
 
 typealias MapUserInterfaceView = MapUserInterface & UIView
 
@@ -28,7 +29,15 @@ final class MapViewController: UIViewController {
   
   private func setupObservers() {
     viewModel.askForLocationPermission()
-    
+    viewModel.onLocationComplete = { [weak self] result in
+      if case .success(let location) = result {
+        self?.userInterface.recenter(at: location)
+      }
+      if case .failure = result {
+        //        self.locationPermissionGiven = false
+      }
+    }
+
   }
   
 }

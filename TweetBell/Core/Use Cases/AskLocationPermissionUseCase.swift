@@ -1,7 +1,7 @@
 import Foundation
 import CoreLocation
 
-typealias AskLocationPermissionUseCaseResult = Result<CLLocationCoordinate2D, TweetBellError>
+typealias AskLocationPermissionUseCaseResult = Result<CLLocation, TweetBellError>
 
 class AskLocationPermissionUseCase: NSObject, UseCase {
   
@@ -19,9 +19,9 @@ class AskLocationPermissionUseCase: NSObject, UseCase {
     locationManager.requestAlwaysAuthorization()
     locationManager.requestWhenInUseAuthorization()
     if CLLocationManager.locationServicesEnabled() {
+      locationManager.delegate = self
       locationManager.startUpdatingLocation()
       locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-      locationManager.delegate = self
     } else {
       onComplete(.failure(.locationPermissionNotGiven))
     }
@@ -33,9 +33,8 @@ class AskLocationPermissionUseCase: NSObject, UseCase {
 extension AskLocationPermissionUseCase: CLLocationManagerDelegate {
   
   func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-    getCurrentLocation(manager: manager)
-    guard let coordinates = manager.location?.coordinate else { return }
-    onComplete(.success(coordinates))
+    guard let location = manager.location else { return }
+    onComplete(.success(location))
   }
   
   // Handle authorization
