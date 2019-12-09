@@ -5,12 +5,11 @@ typealias MapUserInterfaceView = MapUserInterface & UIView
 
 final class MapViewController: UIViewController {
   
-  private var locationSubscriber: AnyCancellable?
-  private var tweetsSubscriber: AnyCancellable?
-  
-  
   private let viewModel: MapViewModel
   private let userInterface: MapUserInterfaceView
+  
+  private var tweetsSubscriber: AnyCancellable?
+  private var locationSubscriber: AnyCancellable?
   
   init(viewModel: MapViewModel, userInterface: MapUserInterfaceView) {
     self.viewModel = viewModel
@@ -32,18 +31,14 @@ final class MapViewController: UIViewController {
   }
   
   private func setupObservers() {
-    var fetch = 0
     viewModel.askForLocationPermission()
     locationSubscriber = viewModel.$currentLocation.receive(on: DispatchQueue.main).sink { [weak self] location in
       guard let location = location else { return }
       self?.userInterface.recenter(at: location)
-      guard fetch < 2 else { return }
       self?.viewModel.getRecentTweets()
-      fetch += 1
     }
     tweetsSubscriber = viewModel.$tweets.receive(on: DispatchQueue.main).sink { [weak self] tweets in
       self?.userInterface.showTweetsOnMap(tweets: tweets)
     }
   }
-  
 }

@@ -4,6 +4,7 @@ import CoreLocation
 
 class MapViewModel: ViewModel, ObservableObject {
   
+  private var currentLocationSet = false
   @Published var tweets: [Tweet] = [] 
   @Published var currentLocation: CLLocation? = nil
   @Published var locationPermissionGiven: Bool = false
@@ -18,7 +19,11 @@ class MapViewModel: ViewModel, ObservableObject {
   func askForLocationPermission() {
     askLocationPermissionUseCase.start()
     askLocationPermissionUseCase.onComplete = { result in
-      if case .success(let location) = result { self.currentLocation = location }
+      if case .success(let location) = result {
+        guard self.currentLocationSet == false else { return }
+        self.currentLocation = location
+        self.currentLocationSet = true
+      }
       if case .failure = result { self.locationPermissionGiven = false }
     }
   }
