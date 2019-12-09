@@ -4,7 +4,7 @@ import CoreLocation
 
 class MapViewModel: ViewModel, ObservableObject {
   
-  @Published var tweets: [Tweet] = []
+  @Published var tweets: [Tweet] = [] 
   @Published var currentLocation: CLLocation? = nil
   @Published var locationPermissionGiven: Bool = false
   
@@ -25,12 +25,12 @@ class MapViewModel: ViewModel, ObservableObject {
   
   func getRecentTweets() {
     guard let location = currentLocation else { return }
-    let request = TweetRequests.getTweetsByLocation(location: location, radius: 10)
+    let request = TweetRequests.getTweetsByLocation(location: location, radius: 5)
     let webClient = WebClient(session: .shared)
     showRecentTweetsOnMapUseCase = ShowRecentTweetsOnMapUseCase(request: request, dispatcher: webClient)
     showRecentTweetsOnMapUseCase.start()
     showRecentTweetsOnMapUseCase.onComplete = { result in
-      if case .success(let tweets) = result { self.tweets = tweets }
+      if case .success(let tweets) = result { self.tweets = tweets.filter { $0.coordinates != nil } }
     }
   }
   

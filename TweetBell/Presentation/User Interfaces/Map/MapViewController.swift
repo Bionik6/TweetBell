@@ -30,11 +30,14 @@ final class MapViewController: UIViewController {
   }
   
   private func setupObservers() {
+    var fetch = 0
     viewModel.askForLocationPermission()
     locationSubscriber = viewModel.$currentLocation.receive(on: DispatchQueue.main).sink { [weak self] location in
       guard let location = location else { return }
       self?.userInterface.recenter(at: location)
+      guard fetch < 2 else { return }
       self?.viewModel.getRecentTweets()
+      fetch += 1
     }
     
   }

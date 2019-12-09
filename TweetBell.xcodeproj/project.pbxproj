@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40094550239E621A00E4E3BA /* secrets.json in Resources */ = {isa = PBXBuildFile; fileRef = 4009454F239E621A00E4E3BA /* secrets.json */; };
 		402510EE239CFD8000325B9F /* helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402510ED239CFD8000325B9F /* helpers.swift */; };
 		402510F0239CFDBD00325B9F /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402510EF239CFDBD00325B9F /* UIView+Constraints.swift */; };
 		402510F3239D029A00325B9F /* AskLocationPermissionUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402510F2239D029A00325B9F /* AskLocationPermissionUseCaseTests.swift */; };
@@ -29,7 +30,6 @@
 		408AC1A5239BFCD9003CABA9 /* TweetBellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC1A4239BFCD9003CABA9 /* TweetBellTests.swift */; };
 		408AC1B2239BFD83003CABA9 /* SecretsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC1B1239BFD83003CABA9 /* SecretsTests.swift */; };
 		408AC1B4239BFDC0003CABA9 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC1B3239BFDC0003CABA9 /* Secrets.swift */; };
-		408AC1B6239C0119003CABA9 /* secrets.json in Resources */ = {isa = PBXBuildFile; fileRef = 408AC1B5239C0119003CABA9 /* secrets.json */; };
 		408AC1CF239C100C003CABA9 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC1CE239C100C003CABA9 /* UseCase.swift */; };
 		408AC1D1239C1035003CABA9 /* AskLocationPermissionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC1D0239C1035003CABA9 /* AskLocationPermissionUseCase.swift */; };
 		408AC1D4239C2124003CABA9 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC1D3239C2124003CABA9 /* MapViewModel.swift */; };
@@ -66,6 +66,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4009454F239E621A00E4E3BA /* secrets.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = secrets.json; sourceTree = "<group>"; };
 		402510ED239CFD8000325B9F /* helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helpers.swift; sourceTree = "<group>"; };
 		402510EF239CFDBD00325B9F /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		402510F2239D029A00325B9F /* AskLocationPermissionUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskLocationPermissionUseCaseTests.swift; sourceTree = "<group>"; };
@@ -92,7 +93,6 @@
 		408AC1A6239BFCD9003CABA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		408AC1B1239BFD83003CABA9 /* SecretsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretsTests.swift; sourceTree = "<group>"; };
 		408AC1B3239BFDC0003CABA9 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
-		408AC1B5239C0119003CABA9 /* secrets.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = secrets.json; sourceTree = "<group>"; };
 		408AC1CE239C100C003CABA9 /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
 		408AC1D0239C1035003CABA9 /* AskLocationPermissionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskLocationPermissionUseCase.swift; sourceTree = "<group>"; };
 		408AC1D3239C2124003CABA9 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
@@ -304,7 +304,7 @@
 			children = (
 				403F15BD239DA29E00D690E4 /* Main.storyboard */,
 				408AC196239BFCD9003CABA9 /* Assets.xcassets */,
-				408AC1B5239C0119003CABA9 /* secrets.json */,
+				4009454F239E621A00E4E3BA /* secrets.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -546,7 +546,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				408AC19A239BFCD9003CABA9 /* LaunchScreen.storyboard in Resources */,
-				408AC1B6239C0119003CABA9 /* secrets.json in Resources */,
+				40094550239E621A00E4E3BA /* secrets.json in Resources */,
 				408AC197239BFCD9003CABA9 /* Assets.xcassets in Resources */,
 				403F15BE239DA29E00D690E4 /* Main.storyboard in Resources */,
 			);

@@ -6,10 +6,10 @@ struct Coordinates {
   var longitude: Double = 0
   
   init?(json: JSON) {
-    guard let geo = json["coordinates"].array else { return nil }
+    guard let geo = json["bounding_box"]["coordinates"][0][0].array else { return nil }
     let values = geo.compactMap { $0.doubleValue }
-    self.latitude = values[0]
-    self.longitude = values[1]
+    self.latitude = values[1]
+    self.longitude = values[0]
   }
 }
 
@@ -23,6 +23,6 @@ struct Tweet {
     self.id = json["id"].intValue
     self.text = json["text"].stringValue
     self.user = User(json: json["user"])
-    self.coordinates = Coordinates(json: json["geo"])
+    self.coordinates = Coordinates(json: json["place"])
   }
 }
