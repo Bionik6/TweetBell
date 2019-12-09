@@ -34,6 +34,7 @@ final class MapViewController: UIViewController {
     locationSubscriber = viewModel.$currentLocation.receive(on: DispatchQueue.main).sink { [weak self] location in
       guard let location = location else { return }
       self?.userInterface.recenter(at: location)
+      self?.viewModel.getRecentTweets()
     }
     
   }
