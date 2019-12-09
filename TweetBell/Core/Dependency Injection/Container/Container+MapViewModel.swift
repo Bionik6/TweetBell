@@ -4,8 +4,7 @@ import CoreLocation
 extension Container: ViewModelFactory {
   
   func makeMapViewModel() -> MapViewModel {
-    let locationManager = CLLocationManager()
-    let useCase = AskLocationPermissionUseCase(locationManager: locationManager, onComplete: nil)
+    let useCase = AskLocationPermissionUseCase()
     return MapViewModel(askPermissionUseCase: useCase)
   }
   
