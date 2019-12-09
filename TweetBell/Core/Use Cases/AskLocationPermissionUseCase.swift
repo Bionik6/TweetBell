@@ -8,7 +8,7 @@ class AskLocationPermissionUseCase: NSObject, UseCase {
   var onComplete: (AskLocationPermissionUseCaseResult) -> Void
   private(set) var locationManager: LocationManager
   
-  init(locationManager: LocationManager,
+  init(locationManager: LocationManager = CLLocationManager(),
        onComplete: ((AskLocationPermissionUseCaseResult) -> Void)? = nil) {
     self.locationManager = locationManager
     self.onComplete = onComplete ?? { result in }

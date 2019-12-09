@@ -18,7 +18,7 @@ struct MockLocationManager: LocationManager {
   
   func isLocationServicesEnabled() -> Bool { return true }
   
-  func getAuthorizationStatus() -> CLAuthorizationStatus { return .denied }
+  func getAuthorizationStatus() -> CLAuthorizationStatus { return .authorizedAlways }
 }
 
 
@@ -54,5 +54,16 @@ class AskLocationPermissionUseCaseTests: XCTestCase {
     XCTAssertEqual(sut.locationManager.location!.coordinate.longitude, 10)
     XCTAssertEqual(sut.locationManager.location!.coordinate.latitude, 10)
   }
+  
+  /* func testCompletion() {
+   let promise = expectation(description: "completion promise")
+   //    sut.start()
+   sut.getCurrentLocation(manager: sut.locationManager)
+   sut.onComplete = { result in
+   log.debug(result)
+   promise.fulfill()
+   }
+   waitForExpectations(timeout: 3)
+   } */
   
 }

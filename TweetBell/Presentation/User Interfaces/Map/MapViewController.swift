@@ -5,6 +5,8 @@ typealias MapUserInterfaceView = MapUserInterface & UIView
 
 final class MapViewController: UIViewController {
   
+  private var locationSubscriber: AnyCancellable?
+  
   private let viewModel: MapViewModel
   private let userInterface: MapUserInterfaceView
   
@@ -29,14 +31,11 @@ final class MapViewController: UIViewController {
   
   private func setupObservers() {
     viewModel.askForLocationPermission()
-    viewModel.onLocationComplete = { [weak self] result in
-      if case .success(let location) = result {
-        self?.userInterface.recenter(at: location)
-      }
-      if case .failure = result {
-      }
+    locationSubscriber = viewModel.$currentLocation.receive(on: DispatchQueue.main).sink { [weak self] location in
+      guard let location = location else { return }
+      self?.userInterface.recenter(at: location)
     }
-
+    
   }
   
 }
