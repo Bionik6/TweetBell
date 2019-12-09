@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		40094550239E621A00E4E3BA /* secrets.json in Resources */ = {isa = PBXBuildFile; fileRef = 4009454F239E621A00E4E3BA /* secrets.json */; };
 		402510EE239CFD8000325B9F /* helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402510ED239CFD8000325B9F /* helpers.swift */; };
 		402510F0239CFDBD00325B9F /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402510EF239CFDBD00325B9F /* UIView+Constraints.swift */; };
 		402510F3239D029A00325B9F /* AskLocationPermissionUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402510F2239D029A00325B9F /* AskLocationPermissionUseCaseTests.swift */; };
@@ -24,6 +23,7 @@
 		403F15C8239DA34000D690E4 /* RequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F15C1239DA33B00D690E4 /* RequestTests.swift */; };
 		403F15CA239DA34000D690E4 /* ResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F15C2239DA33B00D690E4 /* ResponseTests.swift */; };
 		4062FC3D239E7DEA00C7EE67 /* AlertShowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4062FC3C239E7DEA00C7EE67 /* AlertShowable.swift */; };
+		4062FC3F239E82D200C7EE67 /* secrets.json in Resources */ = {isa = PBXBuildFile; fileRef = 4062FC3E239E82D200C7EE67 /* secrets.json */; };
 		408AC18E239BFCD8003CABA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC18D239BFCD8003CABA9 /* AppDelegate.swift */; };
 		408AC190239BFCD8003CABA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC18F239BFCD8003CABA9 /* SceneDelegate.swift */; };
 		408AC197239BFCD9003CABA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 408AC196239BFCD9003CABA9 /* Assets.xcassets */; };
@@ -66,7 +66,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4009454F239E621A00E4E3BA /* secrets.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = secrets.json; sourceTree = "<group>"; };
 		402510ED239CFD8000325B9F /* helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helpers.swift; sourceTree = "<group>"; };
 		402510EF239CFDBD00325B9F /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		402510F2239D029A00325B9F /* AskLocationPermissionUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskLocationPermissionUseCaseTests.swift; sourceTree = "<group>"; };
@@ -83,6 +82,7 @@
 		403F15C3239DA33B00D690E4 /* HTTPMethodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethodTests.swift; sourceTree = "<group>"; };
 		403F15C4239DA33B00D690E4 /* RequestParamsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestParamsTests.swift; sourceTree = "<group>"; };
 		4062FC3C239E7DEA00C7EE67 /* AlertShowable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertShowable.swift; sourceTree = "<group>"; };
+		4062FC3E239E82D200C7EE67 /* secrets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = secrets.json; sourceTree = "<group>"; };
 		408AC18A239BFCD8003CABA9 /* TweetBell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TweetBell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		408AC18D239BFCD8003CABA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		408AC18F239BFCD8003CABA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -302,9 +302,9 @@
 		408AC1C1239C04F6003CABA9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4062FC3E239E82D200C7EE67 /* secrets.json */,
 				403F15BD239DA29E00D690E4 /* Main.storyboard */,
 				408AC196239BFCD9003CABA9 /* Assets.xcassets */,
-				4009454F239E621A00E4E3BA /* secrets.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -546,7 +546,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				408AC19A239BFCD9003CABA9 /* LaunchScreen.storyboard in Resources */,
-				40094550239E621A00E4E3BA /* secrets.json in Resources */,
+				4062FC3F239E82D200C7EE67 /* secrets.json in Resources */,
 				408AC197239BFCD9003CABA9 /* Assets.xcassets in Resources */,
 				403F15BE239DA29E00D690E4 /* Main.storyboard in Resources */,
 			);
