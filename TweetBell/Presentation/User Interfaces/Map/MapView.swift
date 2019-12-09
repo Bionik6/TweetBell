@@ -30,4 +30,17 @@ final class MapView: UIView, MapUserInterface {
     mapView.setRegion(coordinateRegion, animated: true)
   }
   
+  func showTweetsOnMap(tweets: [Tweet]) {
+    tweets.forEach {
+      guard let coordinates = $0.coordinates else { return }
+      let annotation = MKPointAnnotation()
+      annotation.title = $0.user.name
+      annotation.subtitle = $0.text
+      annotation.coordinate = CLLocationCoordinate2D(latitude: coordinates.latitude,
+                                                     longitude: coordinates.longitude)
+      self.mapView.removeAnnotation(annotation)
+      self.mapView.addAnnotation(annotation)
+    }
+  }
+  
 }

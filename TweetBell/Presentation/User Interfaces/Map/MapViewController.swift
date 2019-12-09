@@ -6,6 +6,8 @@ typealias MapUserInterfaceView = MapUserInterface & UIView
 final class MapViewController: UIViewController {
   
   private var locationSubscriber: AnyCancellable?
+  private var tweetsSubscriber: AnyCancellable?
+  
   
   private let viewModel: MapViewModel
   private let userInterface: MapUserInterfaceView
@@ -39,7 +41,9 @@ final class MapViewController: UIViewController {
       self?.viewModel.getRecentTweets()
       fetch += 1
     }
-    
+    tweetsSubscriber = viewModel.$tweets.receive(on: DispatchQueue.main).sink { [weak self] tweets in
+      self?.userInterface.showTweetsOnMap(tweets: tweets)
+    }
   }
   
 }
