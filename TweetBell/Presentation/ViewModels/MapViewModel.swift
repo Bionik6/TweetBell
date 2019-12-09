@@ -7,7 +7,7 @@ class MapViewModel: ViewModel, ObservableObject {
   private var currentLocationSet = false
   @Published var tweets: [Tweet] = [] 
   @Published var currentLocation: CLLocation? = nil
-  @Published var locationPermissionGiven: Bool = false
+  @Published var locationPermissionGiven: Bool = true
   
   private let askLocationPermissionUseCase: AskLocationPermissionUseCase
   private var showRecentTweetsOnMapUseCase: ShowRecentTweetsOnMapUseCase!

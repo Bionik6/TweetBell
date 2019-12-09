@@ -1,9 +1,12 @@
-//
-//  AlertShowable.swift
-//  TweetBell
-//
-//  Created by Ibrahima Ciss on 09/12/19.
-//  Copyright © 2019 Ibrahima Ciss. All rights reserved.
-//
+import UIKit
 
-import Foundation
+protocol AlertShowable {}
+
+extension AlertShowable where Self: UIViewController {
+  func showAlert(title: String = "Error", message: String?, completion: (()->())? = nil) {
+    let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    let action = UIAlertAction(title: "OK", style: .default) { _ in completion?() }
+    alertController.addAction(action)
+    self.present(alertController, animated: true, completion: nil)
+  }
+}
