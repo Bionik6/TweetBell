@@ -23,7 +23,6 @@
 		403F15C8239DA34000D690E4 /* RequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F15C1239DA33B00D690E4 /* RequestTests.swift */; };
 		403F15CA239DA34000D690E4 /* ResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F15C2239DA33B00D690E4 /* ResponseTests.swift */; };
 		4062FC3D239E7DEA00C7EE67 /* AlertShowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4062FC3C239E7DEA00C7EE67 /* AlertShowable.swift */; };
-		4062FC3F239E82D200C7EE67 /* secrets.json in Resources */ = {isa = PBXBuildFile; fileRef = 4062FC3E239E82D200C7EE67 /* secrets.json */; };
 		4062FC41239FDAE800C7EE67 /* SimulatedLocation.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4062FC40239FDAE800C7EE67 /* SimulatedLocation.gpx */; };
 		408AC18E239BFCD8003CABA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC18D239BFCD8003CABA9 /* AppDelegate.swift */; };
 		408AC190239BFCD8003CABA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC18F239BFCD8003CABA9 /* SceneDelegate.swift */; };
@@ -61,6 +60,7 @@
 		40FD793123A0D6AA0034F4B3 /* FixtureLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FD793023A0D6AA0034F4B3 /* FixtureLoader.swift */; };
 		40FD793323A0D9960034F4B3 /* user.json in Resources */ = {isa = PBXBuildFile; fileRef = 40FD793223A0D9960034F4B3 /* user.json */; };
 		40FD793523A0DA890034F4B3 /* place.json in Resources */ = {isa = PBXBuildFile; fileRef = 40FD793423A0DA890034F4B3 /* place.json */; };
+		40FD793723A0DCF30034F4B3 /* secrets.json in Resources */ = {isa = PBXBuildFile; fileRef = 40FD793623A0DCF30034F4B3 /* secrets.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,7 +90,6 @@
 		403F15C3239DA33B00D690E4 /* HTTPMethodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethodTests.swift; sourceTree = "<group>"; };
 		403F15C4239DA33B00D690E4 /* RequestParamsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestParamsTests.swift; sourceTree = "<group>"; };
 		4062FC3C239E7DEA00C7EE67 /* AlertShowable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertShowable.swift; sourceTree = "<group>"; };
-		4062FC3E239E82D200C7EE67 /* secrets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = secrets.json; sourceTree = "<group>"; };
 		4062FC40239FDAE800C7EE67 /* SimulatedLocation.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = SimulatedLocation.gpx; sourceTree = "<group>"; };
 		408AC18A239BFCD8003CABA9 /* TweetBell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TweetBell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		408AC18D239BFCD8003CABA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +131,7 @@
 		40FD793023A0D6AA0034F4B3 /* FixtureLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureLoader.swift; sourceTree = "<group>"; };
 		40FD793223A0D9960034F4B3 /* user.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = user.json; sourceTree = "<group>"; };
 		40FD793423A0DA890034F4B3 /* place.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = place.json; sourceTree = "<group>"; };
+		40FD793623A0DCF30034F4B3 /* secrets.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = secrets.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -303,9 +303,9 @@
 			isa = PBXGroup;
 			children = (
 				4062FC40239FDAE800C7EE67 /* SimulatedLocation.gpx */,
-				4062FC3E239E82D200C7EE67 /* secrets.json */,
 				403F15BD239DA29E00D690E4 /* Main.storyboard */,
 				408AC196239BFCD9003CABA9 /* Assets.xcassets */,
+				40FD793623A0DCF30034F4B3 /* secrets.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -554,9 +554,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				408AC19A239BFCD9003CABA9 /* LaunchScreen.storyboard in Resources */,
-				4062FC3F239E82D200C7EE67 /* secrets.json in Resources */,
 				408AC197239BFCD9003CABA9 /* Assets.xcassets in Resources */,
 				403F15BE239DA29E00D690E4 /* Main.storyboard in Resources */,
+				40FD793723A0DCF30034F4B3 /* secrets.json in Resources */,
 				4062FC41239FDAE800C7EE67 /* SimulatedLocation.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
