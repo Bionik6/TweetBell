@@ -1,6 +1,6 @@
 import Foundation
 
-final class Logger {
+class Logger {
   
   func debug(_ message: Any, file: String = #file, line: Int = #line) {
     print("✅ Debug - \(file.split(separator: "/").last!):\(line) => \(message)")

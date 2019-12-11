@@ -13,6 +13,7 @@ final class ShowRecentTweetsOnMapUseCase: UseCase {
     self.dispatcher = dispatcher
   }
   
+  /// Default method to go fetch the last tweets
   func start() {
     dispatcher.execute(request: request) { response in
       switch response {

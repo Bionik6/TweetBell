@@ -14,6 +14,7 @@ class AskLocationPermissionUseCase: NSObject, UseCase {
     self.onComplete = onComplete ?? { result in }
   }
   
+  /// Default method to ask for location permission
   func start() {
     assert(Thread.isMainThread)
     locationManager.requestAlwaysAuthorization()
