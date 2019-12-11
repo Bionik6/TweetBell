@@ -24,6 +24,7 @@
 		403F15CA239DA34000D690E4 /* ResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403F15C2239DA33B00D690E4 /* ResponseTests.swift */; };
 		4062FC3D239E7DEA00C7EE67 /* AlertShowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4062FC3C239E7DEA00C7EE67 /* AlertShowable.swift */; };
 		4062FC3F239E82D200C7EE67 /* secrets.json in Resources */ = {isa = PBXBuildFile; fileRef = 4062FC3E239E82D200C7EE67 /* secrets.json */; };
+		4062FC41239FDAE800C7EE67 /* SimulatedLocation.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4062FC40239FDAE800C7EE67 /* SimulatedLocation.gpx */; };
 		408AC18E239BFCD8003CABA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC18D239BFCD8003CABA9 /* AppDelegate.swift */; };
 		408AC190239BFCD8003CABA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC18F239BFCD8003CABA9 /* SceneDelegate.swift */; };
 		408AC197239BFCD9003CABA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 408AC196239BFCD9003CABA9 /* Assets.xcassets */; };
@@ -53,6 +54,8 @@
 		408AC20C239C3643003CABA9 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC1FE239C31CB003CABA9 /* HTTPMethod.swift */; };
 		408AC20D239C3643003CABA9 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC1FF239C31CB003CABA9 /* Request.swift */; };
 		408AC20E239C3643003CABA9 /* WebClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC200239C31CB003CABA9 /* WebClient.swift */; };
+		40FD792823A041730034F4B3 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FD792723A041730034F4B3 /* UserTests.swift */; };
+		40FD792A23A0CDE50034F4B3 /* TweetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FD792923A0CDE50034F4B3 /* TweetTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +86,7 @@
 		403F15C4239DA33B00D690E4 /* RequestParamsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestParamsTests.swift; sourceTree = "<group>"; };
 		4062FC3C239E7DEA00C7EE67 /* AlertShowable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertShowable.swift; sourceTree = "<group>"; };
 		4062FC3E239E82D200C7EE67 /* secrets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = secrets.json; sourceTree = "<group>"; };
+		4062FC40239FDAE800C7EE67 /* SimulatedLocation.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = SimulatedLocation.gpx; sourceTree = "<group>"; };
 		408AC18A239BFCD8003CABA9 /* TweetBell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TweetBell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		408AC18D239BFCD8003CABA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		408AC18F239BFCD8003CABA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +120,8 @@
 		408AC1FF239C31CB003CABA9 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		408AC200239C31CB003CABA9 /* WebClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebClient.swift; sourceTree = "<group>"; };
 		408AC202239C32DD003CABA9 /* Dispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispatcher.swift; sourceTree = "<group>"; };
+		40FD792723A041730034F4B3 /* UserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
+		40FD792923A0CDE50034F4B3 /* TweetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,12 +164,28 @@
 		403F15BF239DA33300D690E4 /* Remote API */ = {
 			isa = PBXGroup;
 			children = (
+				402510FC239D497600325B9F /* TweetRequestsTests.swift */,
+				4062FC4B23A037E100C7EE67 /* Network */,
+			);
+			path = "Remote API";
+			sourceTree = "<group>";
+		};
+		4062FC44239FFB5700C7EE67 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		4062FC4B23A037E100C7EE67 /* Network */ = {
+			isa = PBXGroup;
+			children = (
 				403F15C3239DA33B00D690E4 /* HTTPMethodTests.swift */,
 				403F15C4239DA33B00D690E4 /* RequestParamsTests.swift */,
 				403F15C1239DA33B00D690E4 /* RequestTests.swift */,
 				403F15C2239DA33B00D690E4 /* ResponseTests.swift */,
 			);
-			path = "Remote API";
+			path = Network;
 			sourceTree = "<group>";
 		};
 		408AC181239BFCD8003CABA9 = {
@@ -215,8 +237,6 @@
 			children = (
 				408AC1D7239C23CB003CABA9 /* Dependency Injection */,
 				408AC1CD239C0FFB003CABA9 /* Use Cases */,
-				408AC1BC239C04A3003CABA9 /* Broadcasters */,
-				408AC1BA239C048E003CABA9 /* Data Store */,
 				408AC1B9239C0487003CABA9 /* Entities */,
 				408AC1BB239C0497003CABA9 /* Remote API */,
 			);
@@ -228,8 +248,6 @@
 			children = (
 				408AC1CC239C0547003CABA9 /* App */,
 				408AC1BD239C04B3003CABA9 /* Displayable Entities */,
-				408AC1C0239C04D0003CABA9 /* Interaction Responders */,
-				408AC1BE239C04BE003CABA9 /* Obersers */,
 				408AC1BF239C04C7003CABA9 /* User Interfaces */,
 				408AC1D2239C2110003CABA9 /* ViewModels */,
 			);
@@ -247,13 +265,6 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
-		408AC1BA239C048E003CABA9 /* Data Store */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Data Store";
-			sourceTree = "<group>";
-		};
 		408AC1BB239C0497003CABA9 /* Remote API */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,25 +274,11 @@
 			path = "Remote API";
 			sourceTree = "<group>";
 		};
-		408AC1BC239C04A3003CABA9 /* Broadcasters */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Broadcasters;
-			sourceTree = "<group>";
-		};
 		408AC1BD239C04B3003CABA9 /* Displayable Entities */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = "Displayable Entities";
-			sourceTree = "<group>";
-		};
-		408AC1BE239C04BE003CABA9 /* Obersers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Obersers;
 			sourceTree = "<group>";
 		};
 		408AC1BF239C04C7003CABA9 /* User Interfaces */ = {
@@ -292,16 +289,10 @@
 			path = "User Interfaces";
 			sourceTree = "<group>";
 		};
-		408AC1C0239C04D0003CABA9 /* Interaction Responders */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Interaction Responders";
-			sourceTree = "<group>";
-		};
 		408AC1C1239C04F6003CABA9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4062FC40239FDAE800C7EE67 /* SimulatedLocation.gpx */,
 				4062FC3E239E82D200C7EE67 /* secrets.json */,
 				403F15BD239DA29E00D690E4 /* Main.storyboard */,
 				408AC196239BFCD9003CABA9 /* Assets.xcassets */,
@@ -317,7 +308,6 @@
 				408AC1C6239C0526003CABA9 /* Broadcasters */,
 				408AC1C4239C0526003CABA9 /* Data Store */,
 				408AC1C5239C0526003CABA9 /* Entities */,
-				408AC1C7239C0526003CABA9 /* Remote API */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -341,6 +331,8 @@
 		408AC1C5239C0526003CABA9 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				40FD792723A041730034F4B3 /* UserTests.swift */,
+				40FD792923A0CDE50034F4B3 /* TweetTests.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -350,14 +342,6 @@
 			children = (
 			);
 			path = Broadcasters;
-			sourceTree = "<group>";
-		};
-		408AC1C7239C0526003CABA9 /* Remote API */ = {
-			isa = PBXGroup;
-			children = (
-				402510FC239D497600325B9F /* TweetRequestsTests.swift */,
-			);
-			path = "Remote API";
 			sourceTree = "<group>";
 		};
 		408AC1CB239C052C003CABA9 /* User Interfaces */ = {
@@ -379,6 +363,7 @@
 		408AC1CD239C0FFB003CABA9 /* Use Cases */ = {
 			isa = PBXGroup;
 			children = (
+				4062FC44239FFB5700C7EE67 /* Authentication */,
 				408AC1CE239C100C003CABA9 /* UseCase.swift */,
 				408AC1D0239C1035003CABA9 /* AskLocationPermissionUseCase.swift */,
 				403F15BB239D926100D690E4 /* ShowRecentTweetsOnMapUseCase.swift */,
@@ -549,6 +534,7 @@
 				4062FC3F239E82D200C7EE67 /* secrets.json in Resources */,
 				408AC197239BFCD9003CABA9 /* Assets.xcassets in Resources */,
 				403F15BE239DA29E00D690E4 /* Main.storyboard in Resources */,
+				4062FC41239FDAE800C7EE67 /* SimulatedLocation.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,8 +594,10 @@
 				403F15C8239DA34000D690E4 /* RequestTests.swift in Sources */,
 				402510F3239D029A00325B9F /* AskLocationPermissionUseCaseTests.swift in Sources */,
 				408AC1DE239C2468003CABA9 /* ContainerTests.swift in Sources */,
+				40FD792A23A0CDE50034F4B3 /* TweetTests.swift in Sources */,
 				408AC1A5239BFCD9003CABA9 /* TweetBellTests.swift in Sources */,
 				403F15C7239DA34000D690E4 /* RequestParamsTests.swift in Sources */,
+				40FD792823A041730034F4B3 /* UserTests.swift in Sources */,
 				408AC1B2239BFD83003CABA9 /* SecretsTests.swift in Sources */,
 				403F15C6239DA34000D690E4 /* HTTPMethodTests.swift in Sources */,
 				408AC1E1239C24BC003CABA9 /* MapViewModelTests.swift in Sources */,

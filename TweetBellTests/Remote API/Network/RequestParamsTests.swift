@@ -3,7 +3,7 @@ import XCTest
 
 class RequestParamsTests: XCTestCase {
   
-  var sut: RequestParams?
+  private var sut: RequestParams?
   
   override func setUp() {
     super.setUp()

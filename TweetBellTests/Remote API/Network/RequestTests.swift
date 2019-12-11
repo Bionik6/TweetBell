@@ -4,7 +4,7 @@ import XCTest
 
 class RequestTests: XCTestCase {
 
-  var sut: Request?
+  private var sut: Request?
 
   class FakeRequest: Request {
     var path: String = "/users"

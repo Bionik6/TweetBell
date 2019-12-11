@@ -3,7 +3,7 @@ import XCTest
 
 class ResponseTests: XCTestCase {
   
-  var sut: Result<JSON, Error>?
+  private var sut: Result<JSON, Error>?
   
   func testSutHasSuccessCase() {
     let jsonDict = ["firstName": "Ibrahima", "lastName": "Ciss"]

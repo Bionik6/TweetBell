@@ -1,12 +1,14 @@
 import Foundation
-
 struct User {
   var id: Int
-  var name: String
   var url: String
+  var name: String
   var handle: String
   var profileImageUrl: String
-  
+}
+
+
+extension User {
   init(json: JSON) {
     self.id = json["id"].intValue
     self.name = json["name"].stringValue
