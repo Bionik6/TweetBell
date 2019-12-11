@@ -2,7 +2,7 @@ import XCTest
 import CoreLocation
 @testable import TweetBell
 
-struct MockLocationManager: LocationManager {
+class MockLocationManager: NSObject, LocationManager {
   var delegate: CLLocationManagerDelegate?
   var distanceFilter: CLLocationDistance = 10
   var allowsBackgroundLocationUpdates: Bool = true
@@ -21,13 +21,26 @@ struct MockLocationManager: LocationManager {
   func getAuthorizationStatus() -> CLAuthorizationStatus { return .authorizedAlways }
 }
 
+extension MockLocationManager: CLLocationManagerDelegate {
+  func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    self.locationManager(manager, didUpdateLocations: locations)
+  }
+  func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+    
+    
+  }
+  func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+    
+  }
+}
+
 
 class AskLocationPermissionUseCaseTests: XCTestCase {
   
   private var sut: AskLocationPermissionUseCase!
   
   override func setUp() {
-    var locationManager = MockLocationManager()
+    let locationManager = MockLocationManager()
     sut = AskLocationPermissionUseCase(locationManager: locationManager)
     locationManager.delegate = sut
   }

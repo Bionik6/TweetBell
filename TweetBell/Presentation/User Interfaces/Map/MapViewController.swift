@@ -28,6 +28,7 @@ final class MapViewController: UIViewController, AlertShowable {
     setupObservers()
   }
   
+  /// Wire observers to userinterface so the view can react when a publisher emits a signal
   private func setupObservers() {
     locationSubscriber = viewModel.$currentLocation.receive(on: DispatchQueue.main).sink { [weak self] location in
       guard let location = location else { return }

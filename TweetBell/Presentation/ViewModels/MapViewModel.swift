@@ -16,6 +16,7 @@ class MapViewModel: ViewModel, ObservableObject {
     self.askLocationPermissionUseCase = askPermissionUseCase
   }
   
+  /// Call the AskLocationPermissionUseCase to ask for location permission. Once get, it places the user to it's current location where he can see tweets around him
   func askForLocationPermission() {
     askLocationPermissionUseCase.start()
     askLocationPermissionUseCase.onComplete = { result in
@@ -28,6 +29,8 @@ class MapViewModel: ViewModel, ObservableObject {
     }
   }
   
+  
+  /// Call the ShowRecentTweetsOnMapUseCase to fetch the recent tweets based on the user current position then mutate the tweets states that'll published the changes to the subscribers
   func getRecentTweets() {
     guard let location = currentLocation else { return }
     let request = TweetRequests.getTweetsByLocation(location: location, radius: 5)
