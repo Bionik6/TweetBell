@@ -56,6 +56,11 @@
 		408AC20E239C3643003CABA9 /* WebClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408AC200239C31CB003CABA9 /* WebClient.swift */; };
 		40FD792823A041730034F4B3 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FD792723A041730034F4B3 /* UserTests.swift */; };
 		40FD792A23A0CDE50034F4B3 /* TweetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FD792923A0CDE50034F4B3 /* TweetTests.swift */; };
+		40FD792C23A0D1950034F4B3 /* CoordinateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FD792B23A0D1950034F4B3 /* CoordinateTests.swift */; };
+		40FD792E23A0D61A0034F4B3 /* tweet.json in Resources */ = {isa = PBXBuildFile; fileRef = 40FD792D23A0D61A0034F4B3 /* tweet.json */; };
+		40FD793123A0D6AA0034F4B3 /* FixtureLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FD793023A0D6AA0034F4B3 /* FixtureLoader.swift */; };
+		40FD793323A0D9960034F4B3 /* user.json in Resources */ = {isa = PBXBuildFile; fileRef = 40FD793223A0D9960034F4B3 /* user.json */; };
+		40FD793523A0DA890034F4B3 /* place.json in Resources */ = {isa = PBXBuildFile; fileRef = 40FD793423A0DA890034F4B3 /* place.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +127,11 @@
 		408AC202239C32DD003CABA9 /* Dispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispatcher.swift; sourceTree = "<group>"; };
 		40FD792723A041730034F4B3 /* UserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
 		40FD792923A0CDE50034F4B3 /* TweetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetTests.swift; sourceTree = "<group>"; };
+		40FD792B23A0D1950034F4B3 /* CoordinateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateTests.swift; sourceTree = "<group>"; };
+		40FD792D23A0D61A0034F4B3 /* tweet.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = tweet.json; sourceTree = "<group>"; };
+		40FD793023A0D6AA0034F4B3 /* FixtureLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureLoader.swift; sourceTree = "<group>"; };
+		40FD793223A0D9960034F4B3 /* user.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = user.json; sourceTree = "<group>"; };
+		40FD793423A0DA890034F4B3 /* place.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = place.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -331,8 +341,10 @@
 		408AC1C5239C0526003CABA9 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				40FD792F23A0D65D0034F4B3 /* Fixture+Helper */,
 				40FD792723A041730034F4B3 /* UserTests.swift */,
 				40FD792923A0CDE50034F4B3 /* TweetTests.swift */,
+				40FD792B23A0D1950034F4B3 /* CoordinateTests.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -449,6 +461,17 @@
 			path = Map;
 			sourceTree = "<group>";
 		};
+		40FD792F23A0D65D0034F4B3 /* Fixture+Helper */ = {
+			isa = PBXGroup;
+			children = (
+				40FD792D23A0D61A0034F4B3 /* tweet.json */,
+				40FD793223A0D9960034F4B3 /* user.json */,
+				40FD793423A0DA890034F4B3 /* place.json */,
+				40FD793023A0D6AA0034F4B3 /* FixtureLoader.swift */,
+			);
+			path = "Fixture+Helper";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -542,6 +565,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40FD793323A0D9960034F4B3 /* user.json in Resources */,
+				40FD793523A0DA890034F4B3 /* place.json in Resources */,
+				40FD792E23A0D61A0034F4B3 /* tweet.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,6 +617,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40FD792C23A0D1950034F4B3 /* CoordinateTests.swift in Sources */,
 				403F15C8239DA34000D690E4 /* RequestTests.swift in Sources */,
 				402510F3239D029A00325B9F /* AskLocationPermissionUseCaseTests.swift in Sources */,
 				408AC1DE239C2468003CABA9 /* ContainerTests.swift in Sources */,
@@ -600,6 +627,7 @@
 				40FD792823A041730034F4B3 /* UserTests.swift in Sources */,
 				408AC1B2239BFD83003CABA9 /* SecretsTests.swift in Sources */,
 				403F15C6239DA34000D690E4 /* HTTPMethodTests.swift in Sources */,
+				40FD793123A0D6AA0034F4B3 /* FixtureLoader.swift in Sources */,
 				408AC1E1239C24BC003CABA9 /* MapViewModelTests.swift in Sources */,
 				403F15CA239DA34000D690E4 /* ResponseTests.swift in Sources */,
 				402510FD239D497600325B9F /* TweetRequestsTests.swift in Sources */,

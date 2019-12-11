@@ -17,19 +17,13 @@ class UserTests: XCTestCase {
   }
   
   func testInitializationWithJSON() {
-    let object: [String:Any] = ["id": 10,
-                "name": "Ibrahima Ciss",
-                "url": "www.google.com",
-                "screen_name": "@bionik6",
-                "profile_image_url_https": "www.twitter.com"]
+    let user = User(json: loadJSONFixture(for: "user"))
     
-    let json = JSON(object)
-    let user = User(json: json)
-    
-    XCTAssertEqual(user.id, 10)
-    XCTAssertEqual(user.url, "www.google.com")
-    XCTAssertEqual(user.name, "Ibrahima Ciss")
-    XCTAssertEqual(user.handle, "@bionik6")
-    XCTAssertEqual(user.profileImageUrl, "www.twitter.com")
+    XCTAssertEqual(user.id, 133152235)
+    XCTAssertEqual(user.url, "")
+    XCTAssertEqual(user.name, "Khadim Toure")
+    XCTAssertEqual(user.handle, "touresinc")
+    XCTAssertEqual(user.profileImageUrl, "https://pbs.twimg.com/profile_images/1128064263/Small_normal.png")
   }
 }
+

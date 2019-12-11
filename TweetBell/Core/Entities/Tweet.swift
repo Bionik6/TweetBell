@@ -1,7 +1,7 @@
 import Foundation
 import CoreLocation
 
-struct Coordinates {
+struct Coordinates: Equatable {
   var latitude: Double = 0
   var longitude: Double = 0
   
@@ -10,6 +10,10 @@ struct Coordinates {
     let values = geo.compactMap { $0.doubleValue }
     self.latitude = values[1]
     self.longitude = values[0]
+  }
+  
+  static func == (lhs: Self, rhs: Self) -> Bool {
+    return lhs.latitude == rhs.latitude && lhs.longitude == rhs.longitude
   }
 }
 
