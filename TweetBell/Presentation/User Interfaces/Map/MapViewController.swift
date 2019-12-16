@@ -6,11 +6,8 @@ typealias MapUserInterfaceView = MapUserInterface & UIView
 final class MapViewController: UIViewController, AlertShowable {
   
   private let viewModel: MapViewModel
+  private var disposeBag = Set<AnyCancellable>()
   private let userInterface: MapUserInterfaceView
-  
-  private var tweetsSubscriber: AnyCancellable?
-  private var locationSubscriber: AnyCancellable?
-  private var locationPermissionSubscriber: AnyCancellable?
   
   init(viewModel: MapViewModel, userInterface: MapUserInterfaceView) {
     self.viewModel = viewModel
@@ -28,19 +25,26 @@ final class MapViewController: UIViewController, AlertShowable {
     setupObservers()
   }
   
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    view.accessibilityIgnoresInvertColors = false 
+  }
+  
   /// Wire observers to userinterface so the view can react when a publisher emits a signal
   private func setupObservers() {
-    locationSubscriber = viewModel.$currentLocation.receive(on: DispatchQueue.main).sink { [weak self] location in
+    viewModel.$currentLocation.receive(on: DispatchQueue.main).sink { [weak self] location in
       guard let location = location else { return }
       self?.userInterface.recenter(at: location)
       self?.viewModel.getRecentTweets()
-    }
-    tweetsSubscriber = viewModel.$tweets.receive(on: DispatchQueue.main).sink { [weak self] tweets in
+    }.store(in: &disposeBag)
+    
+    viewModel.$tweets.receive(on: DispatchQueue.main).sink { [weak self] tweets in
       self?.userInterface.showTweetsOnMap(tweets: tweets)
-    }
-    locationPermissionSubscriber = viewModel.$locationPermissionGiven.receive(on: DispatchQueue.main).sink { [weak self] permission in
+    }.store(in: &disposeBag)
+    
+    viewModel.$locationPermissionGiven.receive(on: DispatchQueue.main).sink { [weak self] permission in
       guard permission == false else { return }
       self?.showAlert(message: "Please verify your internet and make sure you give location permission")
-    }
+    }.store(in: &disposeBag)
   }
 }

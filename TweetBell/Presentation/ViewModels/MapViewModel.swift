@@ -29,7 +29,6 @@ class MapViewModel: ViewModel, ObservableObject {
     }
   }
   
-  
   /// Call the ShowRecentTweetsOnMapUseCase to fetch the recent tweets based on the user current position then mutate the tweets states that'll published the changes to the subscribers
   func getRecentTweets() {
     guard let location = currentLocation else { return }

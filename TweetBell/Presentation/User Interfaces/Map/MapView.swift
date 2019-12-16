@@ -30,6 +30,9 @@ final class MapView: UIView, MapUserInterface {
     mapView.setRegion(coordinateRegion, animated: true)
   }
   
+  
+  /// Position tweets on map
+  /// - Parameter tweets: [Tweet] to be position
   func showTweetsOnMap(tweets: [Tweet]) {
     tweets.forEach {
       guard let coordinates = $0.coordinates else { return }
